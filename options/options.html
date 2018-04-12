@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle Culture settings</title>
+	<link rel="shortcut icon" type="image/png" href="icon.png"/>
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		.page-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+
+		.input-container {
+			position: relative;
+			width: 300px;
+			border: .5px solid rgba(0,0,0,.25);
+			border-radius: 5px;
+			padding: 20px 25px 10px;
+		}
+		.input-container:before {
+			content: "Options page";
+			position: absolute;
+			top: -29px;
+			left: 0;
+
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: bold;
+
+			padding: 5px;
+		}
+
+		.status-bar {
+			display: inline-block;
+		}
+
+		.input-group {
+			margin-bottom: 10px;
+		}
+
+		.input-group label {
+			display: block;
+		}
+
+		.input-group input {
+			display: block;
+			width: 100%;
+			margin: 2.5px 0;
+			border: .5px solid rgba(0,0,0,.25);
+			border-radius: 5px;
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-container">
+		<div class="input-container">
+			<div class="input-group">
+				<label for="cultureOne">Primary culture:</label>
+				<input type="text" id="cultureOne" placeholder="da" />
+			</div>
+			<div class="input-group">
+				<label for="cultureTwo">Secondary culture:</label>
+				<input type="text" id="cultureTwo" placeholder="en" />
+			</div>
+			<div class="input-group">
+				<button id="save">Save</button>
+				<div class="status-bar">
+					<div id="status"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="options.js"></script>
+</body>
+</html>
