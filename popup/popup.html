@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100px;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        li:hover {
+            cursor: pointer;
+            background: #ddd;
+        }
+
+        p {
+            text-align: center;
+        }
+        img.icon {
+            width: 15px;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+	</style>
+</head>
+
+<body>
+	<ul id="toggleCultureList">
+        <li data-value="da-DK">Dansk</li>
+        <li data-value="de-DE">Deutsch</li>
+        <li data-value="en">English</li>
+        <li data-value="es-ES">Espa&ntilde;ol</li>
+        <li data-value="fo-FO">F&oslash;royskt</li>
+        <li data-value="fr-FR">Fran&ccedil;ais</li>
+        <li data-value="is-IS">&Iacute;slenska</li>
+        <li data-value="nb-NO">Norsk</li>
+        <li data-value="sv-SE">Svenska</li>
+    </ul>
+    <!--<p>
+            <img class="icon" src="exchange-alt.svg"/>
+            <img class="icon" src="cog.svg"/>
+    </p>-->
+    <script src="../scripts/jquery-3.3.1.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

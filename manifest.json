@@ -1,43 +1,27 @@
 {
   "manifest_version": 2,
-
   "name": "Xena - Toggle Culture",
   "description": "Toggle Culture is an extension allowing developers and QA's at Xena.biz to change Culture (language) of UI for faster debugging.",
   "homepage_url": "https://github.com/StefanBols/Xena.ToggleCulture",
-  "version": "1",
+  "version": "2.0.0",
+
   "browser_action": {
-    "default_title": "Toggle Culture"
+    "default_title": "Toggle Culture",
+    "default_icon": "graphics/icons/icon.png",
+    "default_popup": "popup/popup.html"
   },
-  "options_page": "options/options.html",
-
-
-  "background": {
-    "scripts": [
-      "scripts/load.js"
-    ],
-    "persistent": true
+  "icons": {
+    "100": "graphics/icons/icon.png"
   },
-
-  "permissions": [
-    "https://*.xena.biz/*",
-    "https://localhost/*",
-    "http://localhost/*",
-    "activeTab",
-    "storage"
-  ],
 
   "content_scripts": [
-    {
+      {
         "matches": [
             "https://*.xena.biz/*",
             "https://localhost/*",
             "http://localhost/*"
         ],
-        "js": ["lib/jquery-3.3.1.min.js"]
-    }
-  ],
-
-  "icons": {
-    "100": "graphics/icons/icon.png"
-  }
+        "js": ["scripts/contentScript.js", "scripts/jquery-3.3.1.min.js"]
+      }
+  ]
 }
